@@ -1,0 +1,40 @@
+### MadGraph5 tutorial
+### 2021/08/02 written by Shih Lin
+MadGraph is a simulation that can draw Feynman diagram of siganl
+It doesn't include hadronization of the collision.(Hadronization is included in Pythia)
+It only care about the specific process you want.
+
+#step1 enter Madgraph5
+
+	cd MG5_aMC_v3_1_1/
+
+#step2 execute madgraph5
+
+	./bin/mg5_aMC
+	--> MG5_aMC> 
+
+#step3 input your process
+
+	MG5_aMC>generate p p > t t~
+
+		exit
+	
+		./bin/generate_events
+
+#step4 after generating
+
+	MG5_aMC>output -f
+		output direction: Output to directory /Users/zero/work/MG5_aMC_v3_1_1/PROC_sm_0 done.
+
+#step5 go to the output direction
+
+	cd /Users/zero/work/MG5_aMC_v3_1_1/PROC_sm_0/Events/run_01/
+	--> You can see the lhe file in the directory
+	
+	vim LHE file
+	--> See all information about all events
+		( px py pz E Ex Ey Ez??)
+
+Good reference:
+https://indico.cern.ch/event/555228/sessions/203428/attachments/1315471/1970459/tutorial-CMSandATLAS-2016.pdf 
+
